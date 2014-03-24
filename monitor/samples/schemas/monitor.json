@@ -89,7 +89,7 @@
 										                    "objectId": { "type": "string", "required": true },
 										                    "type": { "type": "string" },
 										                    "sourceAggregator": { "type": "string" },
-										                    "field": { "type": "string" },
+										                    "field": { "type": "string" }
 										                }
 											}
 										}
