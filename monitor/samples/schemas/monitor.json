@@ -5,11 +5,11 @@
     "properties": {
     	"root": {
     		"description": "root",
-    		"type": "object"
+    		"type": "object",
     		"properties": {
     			"monitoring": {
 		    		"description": "root",
-		    		"type": "object"
+		    		"type": "object",
 					"properties": {
 						"application" : {
 				    		"description": "application purpose",
@@ -29,8 +29,8 @@
 				                    "name": { "type": "string", "required": true },
 				                    "type": { "type": "string" },
 				                    "sourceId": { "type": "string" },
-				                    "maxSize": { "type": "int" },
-				                    "maxTime": { "type": "int" },
+				                    "maxSize": { "type": "integer" },
+				                    "maxTime": { "type": "integer" },
 				                    "pushTrigger": { "type": "string" }
 				                    } 
 				    		}
