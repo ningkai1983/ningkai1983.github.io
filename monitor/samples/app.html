@@ -12,20 +12,6 @@
   <body>
 
 
-<div class="topbar">
-  <div class="fill">
-    <div class="container">
-      <a class="brand" href="">JSON Editor</a>
-      <ul class="nav">
-        <li><a href="#schema-loader" id="schema-loader-control">Load Schema</a></li>
-        <li><a href="#schema-editor" id="schema-editor-control">Edit Schema</a></li>
-        <li><a href="#about" class="site-about-control">About</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-
 <div id="site">
 
 
@@ -105,7 +91,7 @@ $(document).ready(function () {
     
     var defaultPageTitle = $('#page-main-title').text();
     var defaultPageDesc = $('#data-entry-description').text();
-    var schemaURL = getHashParameterByName('schema_url');
+    var schemaURL = '/schemas/monitor.json';//getHashParameterByName('schema_url');
     var schemaRef = null; // Parsed schema
     var schemaText = null; // The schema as provided by the server
     //var schemaEditorCM = null;
