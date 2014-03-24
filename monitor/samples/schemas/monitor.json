@@ -61,13 +61,13 @@
 									"type": "object",
 									"properties": {
 										"enabled": {
-											"type":"string",
+											"type":"string"
 										},
 										"port": {
-											"type":"string",
+											"type":"string"
 										},
 										"numThreads": {
-											"type":"string",
+											"type":"string"
 										}
 									}		
 								},
@@ -75,10 +75,10 @@
 									"type": "object",
 									"properties": {
 										"enabled": {
-											"type":"string",
+											"type":"string"
 										},
 										"port": {
-											"type":"string",
+											"type":"string"
 										},
 										"objects": {
 											"type":"array",
