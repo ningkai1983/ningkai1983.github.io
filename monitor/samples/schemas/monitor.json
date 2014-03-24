@@ -20,20 +20,83 @@
 				    		"type": "string"
 						},
 						"collectors": {
-				    		"description": "persistence location",
-				    		"type": "array",
-				    		"items": {
-    			                "type": "object",
-				                "name": "person",
-				                "properties": {
-				                    "name": { "type": "string", "required": true },
-				                    "type": { "type": "string" },
-				                    "sourceId": { "type": "string" },
-				                    "maxSize": { "type": "integer" },
-				                    "maxTime": { "type": "integer" },
-				                    "pushTrigger": { "type": "string" }
-				                    } 
-				    		}
+					    		"description": "persistence location",
+					    		"type": "array",
+					    		"items": {
+    				                		"type": "object",
+						                "name": "person",
+						                "properties": {
+						                    "name": { "type": "string", "required": true },
+						                    "type": { "type": "string" },
+						                    "sourceId": { "type": "string" },
+						                    "maxSize": { "type": "integer" },
+						                    "maxTime": { "type": "integer" },
+						                    "pushTrigger": { "type": "string" }
+						                } 
+				    			}
+						},
+						"aggregators": {
+					    		"description": "aggregators location",
+					    		"type": "array",
+					    		"items": {
+    				                		"type": "object",
+						                "name": "person",
+						                "properties": {
+						                    "name": { "type": "string", "required": true },
+						                    "type": { "type": "string" },
+						                    "sourceCollector": { "type": "string" },
+						                    "recalculateAge": { "type": "string" },
+						                    "zeroThreshold": { "type": "string" },
+						                    "buckets": { "type": "string" },
+						                    "n": { "type": "string" },
+						                    "percentiles": { "type": "string" }
+						                } 
+				    			}
+							
+						},
+						"interfaces": {
+							"type": "object",
+							"properties": {
+								"http": {
+									"type": "object",
+									"properties": {
+										"enabled": {
+											"type":"string",
+										},
+										"port": {
+											"type":"string",
+										},
+										"numThreads": {
+											"type":"string",
+										}
+									}		
+								},
+								"snmp": {
+									"type": "object",
+									"properties": {
+										"enabled": {
+											"type":"string",
+										},
+										"port": {
+											"type":"string",
+										},
+										"objects": {
+											"type":"array",
+											"items": {
+				    				                		"type": "object",
+										                "name": "objects",
+										                "properties": {
+										                    "objectId": { "type": "string", "required": true },
+										                    "type": { "type": "string" },
+										                    "sourceAggregator": { "type": "string" },
+										                    "field": { "type": "string" },
+										                }
+											}
+										}
+									}		
+									
+								}
+							}
 						}
 						
 					}    				
