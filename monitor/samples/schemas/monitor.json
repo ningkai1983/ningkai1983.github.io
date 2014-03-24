@@ -34,7 +34,7 @@
 				                    "pushTrigger": { "type": "string" }
 				                    } 
 				    		}
-						},
+						}
 						
 					}    				
     			}
