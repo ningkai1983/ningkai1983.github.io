@@ -1,58 +1,87 @@
 {
-    "type": "object",
-    "name": "C++ Application Monitor",
-    "description": "http://wiki.office.aol.com/wiki/C%2B%2B_Application_Monitoring",
-    "properties": {
-    	"root": {
-    		"description": "root",
-    		"type": "object",
-    		"properties": {
-    			"monitoring": {
-		    		"description": "root",
-		    		"type": "object",
+	"type": "object",
+	"name": "C++ Application Monitor",
+	"description": "http://wiki.office.aol.com/wiki/C%2B%2B_Application_Monitoring",
+	"properties": {
+		"root": {
+			"description": "root",
+			"type": "object",
+			"properties": {
+				"monitoring": {
+					"description": "root",
+					"type": "object",
 					"properties": {
-						"application" : {
-				    		"description": "application purpose",
-				    		"type": "string"
+						"application": {
+							"description": "application purpose",
+							"type": "string"
 						},
 						"persistence": {
-				    		"description": "persistence location",
-				    		"type": "string"
+							"description": "persistence location",
+							"type": "string"
 						},
 						"collectors": {
-					    		"description": "persistence location",
-					    		"type": "array",
-					    		"items": {
-    				                		"type": "object",
-						                "name": "person",
-						                "properties": {
-						                    "name": { "type": "string", "required": true },
-						                    "type": { "type": "string" },
-						                    "sourceId": { "type": "string" },
-						                    "maxSize": { "type": "integer" },
-						                    "maxTime": { "type": "integer" },
-						                    "pushTrigger": { "type": "string" }
-						                } 
-				    			}
+							"description": "persistence location",
+							"type": "array",
+							"items": {
+								"type": "object",
+								"name": "person",
+								"properties": {
+									"name": {
+										"type": "string",
+										"required": true
+									},
+									"type": {
+										"type": "string"
+									},
+									"sourceId": {
+										"type": "string"
+									},
+									"maxSize": {
+										"type": "integer"
+									},
+									"maxTime": {
+										"type": "integer"
+									},
+									"pushTrigger": {
+										"type": "string"
+									}
+								}
+							}
 						},
 						"aggregators": {
-					    		"description": "aggregators location",
-					    		"type": "array",
-					    		"items": {
-    				                		"type": "object",
-						                "name": "person",
-						                "properties": {
-						                    "name": { "type": "string", "required": true },
-						                    "type": { "type": "string" },
-						                    "sourceCollector": { "type": "string" },
-						                    "recalculateAge": { "type": "string" },
-						                    "zeroThreshold": { "type": "string" },
-						                    "buckets": { "type": "string" },
-						                    "n": { "type": "string" },
-						                    "percentiles": { "type": "string" }
-						                } 
-				    			}
-							
+							"description": "aggregators location",
+							"type": "array",
+							"items": {
+								"type": "object",
+								"name": "person",
+								"properties": {
+									"name": {
+										"type": "string",
+										"required": true
+									},
+									"type": {
+										"enum": ["string", "integer"]
+									},
+									"sourceCollector": {
+										"type": "string"
+									},
+									"recalculateAge": {
+										"type": "string"
+									},
+									"zeroThreshold": {
+										"type": "string"
+									},
+									"buckets": {
+										"type": "string"
+									},
+									"n": {
+										"type": "string"
+									},
+									"percentiles": {
+										"type": "string"
+									}
+								}
+							}
 						},
 						"interfaces": {
 							"type": "object",
@@ -61,47 +90,54 @@
 									"type": "object",
 									"properties": {
 										"enabled": {
-											"type":"string"
+											"type": "string"
 										},
 										"port": {
-											"type":"string"
+											"type": "string"
 										},
 										"numThreads": {
-											"type":"string"
+											"type": "string"
 										}
-									}		
+									}
 								},
 								"snmp": {
 									"type": "object",
 									"properties": {
 										"enabled": {
-											"type":"string"
+											"type": "string"
 										},
 										"port": {
-											"type":"string"
+											"type": "string"
 										},
 										"objects": {
-											"type":"array",
+											"type": "array",
 											"items": {
-				    				                		"type": "object",
-										                "name": "objects",
-										                "properties": {
-										                    "objectId": { "type": "string", "required": true },
-										                    "type": { "type": "string" },
-										                    "sourceAggregator": { "type": "string" },
-										                    "field": { "type": "string" }
-										                }
+												"type": "object",
+												"name": "objects",
+												"properties": {
+													"objectId": {
+														"type": "string",
+														"required": true
+													},
+													"type": {
+														"type": "string"
+													},
+													"sourceAggregator": {
+														"type": "string"
+													},
+													"field": {
+														"type": "string"
+													}
+												}
 											}
 										}
-									}		
-									
+									}
 								}
 							}
 						}
-						
-					}    				
-    			}
-    		}
-    	}
-    }
+					}
+				}
+			}
+		}
+	}
 }
